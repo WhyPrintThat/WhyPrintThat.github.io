@@ -1,118 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Print That | It's Lame To Be Normal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --rust: #9e3b1b;
-            --cream-bg: #f5f0e6;
-            --dark-green: #2c3e35;
-            --text-dark: #2b2b2b;
-            --footer-bg: #80301a;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--cream-bg); color: var(--text-dark); }
+  <title>Why Print That | Creative Services</title>
 
-        /* Header Navigation */
-        header { display: flex; align-items: center; justify-content: space-between; padding: 15px 5%; max-width: 1400px; margin: 0 auto; }
-        .logo-group { display: flex; align-items: center; gap: 10px; }
-        .logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
-        .logo-text span { font-family: 'Caveat', cursive; font-size: 2.2rem; color: var(--rust); }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+  <style>
+    :root {
+      --cream: #f7f0df;
+      --cream-dark: #eadfc8;
+      --green: #536653;
+      --green-dark: #354638;
+      --brown: #8b4f3c;
+      --brown-dark: #62382d;
+      --pink: #c98e7b;
+      --black: #29251f;
+      --white: #fffaf0;
+    }
 
-        /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1300px; margin: 20px auto; padding: 20px 5%; gap: 40px; }
-        .hero-content { flex: 1.1; }
-        .hero-title { font-family: 'Caveat', cursive; font-size: 4.5rem; color: var(--text-dark); line-height: 0.95; margin-bottom: 15px; }
-        .hero-subtitle { font-size: 1.1rem; font-weight: 500; margin-bottom: 25px; font-style: italic; }
-        .btn-primary { background-color: var(--dark-green); color: #fff; padding: 12px 28px; text-decoration: none; font-weight: 600; border-radius: 6px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .hero-image { flex: 0.9; text-align: center; }
-        .hero-image img { max-width: 100%; height: auto; border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* Services Section */
-        .section-header { text-align: center; margin: 40px 0 20px; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--text-dark); display: flex; align-items: center; justify-content: center; gap: 15px; }
-        .section-header::before, .section-header::after { content: "—"; color: var(--rust); }
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.6;
+    }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto 40px; padding: 0 5%; text-align: center; }
-        .service-card { background: rgba(255,255,255,0.5); padding: 20px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.05); }
-        .service-card h4 { font-size: 0.95rem; font-weight: 700; margin-top: 10px; color: var(--text-dark); }
+    /* ---------------- NAVIGATION ---------------- */
 
-        /* Sub-footer Banner */
-        .sub-footer { text-align: center; font-weight: 600; font-size: 0.95rem; margin: 30px 0 15px; letter-spacing: 0.5px; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 240, 223, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--cream-dark);
+    }
 
-        /* Footer */
-        footer { background-color: var(--footer-bg); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; font-size: 0.9rem; }
-        footer a { color: #fff; text-decoration: none; }
-    </style>
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    .bug-logo {
+      font-size: 34px;
+      transform: rotate(-12deg);
+    }
+
+    .logo-text {
+      font-family: "Shadows Into Light", cursive;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .logo-text span {
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brown);
+    }
+
+    /* ---------------- HERO ---------------- */
+
+    .hero {
+      max-width: 1200px;
+      margin: 25px auto 0;
+      padding: 65px 60px;
+      min-height: 570px;
+      border-radius: 25px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(circle at 90% 10%, rgba(201,142,123,.35), transparent 25%),
+        radial-gradient(circle at 10% 90%, rgba(83,102,83,.25), transparent 30%),
+        var(--cream-dark);
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 250px;
+      background: var(--green);
+      opacity: .12;
+      transform: rotate(-8deg);
+      right: -100px;
+      bottom: -70px;
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 570px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-heading {
+      font-family: "Shadows Into Light", cursive;
+      color: var(--brown);
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(52px, 7vw, 82px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 .green {
+      color: var(--green);
+    }
+
+    .hero h1 .brown {
+      color: var(--brown);
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 480px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--brown);
+      color: white;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 50px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      transition: .25s;
+      box-shadow: 0 5px 0 var(--brown-dark);
+    }
+
+    .button:hover {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 var(--brown-dark);
+    }
+
+    /* HERO ART */
+
+    .hero-art {
+      position: absolute;
+      right: 35px;
+      bottom: 0;
+      width: 430px;
+      height: 480px;
+    }
+
+    .person {
+      position: absolute;
+      right: 70px;
+      bottom: 0;
+      width: 260px;
+      height: 360px;
+      background: var(--green);
+      border-radius: 140px 140px 30px 30px;
+    }
+
+    .head {
+      position: absolute;
+      width: 165px;
+      height: 190px;
+      background: #e6b28b;
+      border-radius: 50%;
+      top: -90px;
+      left: 47px;
+      border: 5px solid var(--black);
+    }
+
+    .hair {
+      position: absolute;
+      width: 205px;
+      height: 245px;
+      background: #7a4d35;
+      border-radius: 50%;
+      top: -115px;
+      left: 25px;
+      z-index: -1;
+    }
+
+    .eye {
+      position: absolute;
+      width: 34px;
+      height: 22px;
+      background: white;
+      border: 4px solid var(--black);
+      border-radius: 50%;
+      top: 65px;
+    }
+
+    .eye.left {
+      left: 35px;
+    }
+
+    .eye.right {
+      right: 35px;
+    }
+
+    .smile {
+      position: absolute;
+      width: 55px;
+      height: 25px;
+      border-bottom: 4px solid var(--black);
+      border-radius: 50%;
+      left: 52px;
+      top: 112px;
+    }
+
+    .arm {
+      position: absolute;
+      width: 150px;
+      height: 55px;
+      background: #e6b28b;
+      border: 5px solid var(--black);
+      border-radius: 40px;
+      left: -90px;
+      top: 145px;
+      transform: rotate(12deg);
+    }
+
+    .hand {
+      position: absolute;
+      width: 70px;
+      height: 55px;
+      background: #e6b28b;
+      border: 5px solid var(--black);
+      border-radius: 50%;
+      left: -145px;
+      top: 118px;
+      z-index: 5;
+    }
+
+    /* BUG IN HAND */
+
+    .hand-bug {
+      position: absolute;
+      font-size: 48px;
+      left: -142px;
+      top: 115px;
+      z-index: 10;
+      transform: rotate(-15deg);
+    }
+
+    /* ---------------- SERVICES ---------------- */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 30px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading .scribble {
+      font-family: "Shadows Into Light", cursive;
+      color: var(--brown);
+      font-size: 25px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .section-heading p {
+      max-width: 600px;
+      margin: 15px auto;
+      font-size: 17px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 2px solid var(--cream-dark);
+      border-radius: 20px;
+      padding: 35px 20px;
+      text-align: center;
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) rotate(-1deg);
+      border-color: var(--pink);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      border: 3px solid var(--green);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      font-size: 38px;
+    }
+
+    .service-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+    }
+
+    /* ---------------- ABOUT ---------------- */
+
+    .about {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+
+    .about-inner {
+      max-width: 1000px;
+      margin: auto;
+      padding: 90px 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 17px;
+      color: #e9e2d2;
+    }
+
+    .about-card {
+      background: var(--cream);
+      color: var(--black);
+      padding: 40px;
+      border-radius: 25px;
+      transform: rotate(2deg);
+    }
+
+    .about-card h3 {
+      font-family: "Shadows Into Light", cursive;
+      color: var(--brown);
+      font-size: 32px;
+    }
+
+    /* ---------------- CUSTOM ORDERS ---------------- */
+
+    .custom {
+      text-align: center;
+      background: var(--cream-dark);
+      padding: 100px 30px;
+    }
+
+    .custom h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 65px);
+      text-transform: uppercase;
+      line-height: 1;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .custom h2 span {
+      color: var(--brown);
+    }
+
+    .custom p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      background: var(--brown);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer .footer-logo {
+      font-family: "Shadows Into Light", cursive;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 14px;
+      opacity: .9;
+    }
+
+    .socials {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .socials a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media (max-width: 850px) {
+
+      .nav-container {
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        margin: 15px;
+        padding: 45px 25px;
+        min-height: 720px;
+        align-items: flex-start;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero-art {
+        transform: scale(.75);
+        transform-origin: bottom right;
+        right: -20px;
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .logo-text {
+        font-size: 24px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-art {
+        right: -80px;
+        transform: scale(.62);
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 40px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="logo-group">
-            <div class="logo-text">🪲 Why <span>Print That</span></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">SHOP NOW</a></li>
-                <li><a href="#">CUSTOM ORDERS</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2 class="hero-title">IT'S LAME<br>TO BE<br>NORMAL.</h2>
-            <p class="hero-subtitle">Let's make something awesome.</p>
-            <a href="#" class="btn-primary">GET YOUR DESIGN HERE</a>
+      <a href="#" class="logo">
+        <div class="bug-logo">🪲</div>
+        <div class="logo-text">
+          Why Print <span>That</span>
         </div>
-        <div class="hero-image">
-            <img src="https://raw.githubusercontent.com/WhyPrintThat/WhyPrintThat.github.io/main/art.png" alt="Why Print That Illustration" onerror="this.src='https://i.ibb.co/6yV3Jvj/hero-art.png'">
-        </div>
-    </section>
+      </a>
 
-    <div class="section-header">
-        WHAT I MAKE
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Creative Services</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#custom">Custom Orders</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="small-heading">
+        Welcome to Why Print That ✦
+      </div>
+
+      <h1>
+        <span>MAKE</span><br>
+        <span class="brown">SOMETHING</span><br>
+        <span class="green">WEIRD.</span>
+      </h1>
+
+      <p>
+        Custom prints, creative designs, 3D creations, and
+        a whole lot of personality. If you can imagine it,
+        let's see if we can print it.
+      </p>
+
+      <a href="#custom" class="button">
+        Start a Custom Order
+      </a>
+
     </div>
 
-    <section class="services-grid">
-        <div class="service-card">
-            <div style="font-size: 2rem;">👕</div>
-            <h4>SHIRTS & APPAREL</h4>
-        </div>
-        <div class="service-card">
-            <div style="font-size: 2rem;">🏷️</div>
-            <h4>DECALS & STICKERS</h4>
-        </div>
-        <div class="service-card">
-            <div style="font-size: 2rem;">📦</div>
-            <h4>3D OBJECT CREATIONS</h4>
-        </div>
-        <div class="service-card">
-            <div style="font-size: 2rem;">☕</div>
-            <h4>MUGS & MORE</h4>
-        </div>
-    </section>
 
-    <div class="sub-footer">
-        CUSTOM PRINTS • 3D CREATIONS • CRAFTED JUST FOR YOU!
-    </div>
+    <!-- SIMPLE ILLUSTRATION -->
+    <div class="hero-art">
 
-    <footer>
-        <div>✉️ WHYPRINTTHAT@GMAIL.COM</div>
-        <div>📷 📘</div>
-    </footer>
+      <div class="hair"></div>
 
-</body>
-</html>
+      <div class="person">
+
+        <div class="head">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="smile
