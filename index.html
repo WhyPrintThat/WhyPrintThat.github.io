@@ -3,156 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Why Print That</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- Navigation Header -->
     <header class="navbar">
-
         <div class="logo">
-            <span class="bug">🪲</span>
-            <span>WhyPrintThat</span>
+            <span class="beetle-icon">🪲</span>
+            <span class="logo-text">Why Print That</span>
         </div>
-
-        <nav>
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
-            <a href="#custom">CUSTOM ORDERS</a>
-            <a href="#contact">CONTACT</a>
+        <nav class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">SHOP NOW</a>
+            <a href="#">CUSTOM ORDERS</a>
+            <a href="#">CONTACT</a>
         </nav>
-
     </header>
 
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-        <div class="hero-text">
-
-            <div class="little-lines">〰 〰</div>
-
-            <h1>
-                IT'S LAME<br>
-                TO BE<br>
-                <span>NORMAL.</span>
-            </h1>
-
-            <p>Let's make something awesome.</p>
-
-            <a href="#services" class="main-button">
-                GET YOUR DESIGN HERE
-            </a>
-
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1 class="tagline-top">IT'S LAME</h1>
+            <h2 class="tagline-sub">TO BE</h2>
+            <h1 class="tagline-main">NORMAL.</h1>
+            <p class="subtitle">Let's make something awesome.</p>
+            <a href="#" class="cta-button">GET YOUR DESIGN HERE</a>
         </div>
-
-
-        <div class="hero-image">
-
-            <!-- CHANGE THIS IMAGE NAME IF NEEDED -->
-            <img src="your-photo.png" alt="WhyPrintThat">
-
+        <div class="hero-right">
+            <!-- Replace hero-art.png with your main artwork or illustration -->
+            <img src="hero-art.png" alt="Creative Illustration" class="hero-illustration">
         </div>
-
     </section>
 
-
-    <!-- SERVICES -->
-    <section class="services" id="services">
-
-        <h2>SERVICES</h2>
-
-        <div class="service-grid">
-
-            <div class="service">
-                <div class="service-icon">👕</div>
-                <h3>SHIRTS &<br>APPAREL</h3>
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="services-title">✦ OUR CREATIVE SERVICES ✦</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-circle">👕</div>
+                <h3>SHIRTS & APPAREL</h3>
             </div>
-
-            <div class="service">
-                <div class="service-icon">🏷️</div>
-                <h3>DECALS &<br>STICKERS</h3>
+            <div class="service-card">
+                <div class="icon-circle">🏷️</div>
+                <h3>DECALS & STICKERS</h3>
             </div>
-
-            <div class="service">
-                <div class="service-icon">📦</div>
-                <h3>3D OBJECT<br>CREATIONS</h3>
+            <div class="service-card">
+                <div class="icon-circle">📦</div>
+                <h3>3D OBJECT CREATIONS</h3>
             </div>
-
-            <div class="service">
-                <div class="service-icon">☕</div>
-                <h3>MUGS &<br>MORE</h3>
+            <div class="service-card">
+                <div class="icon-circle">☕</div>
+                <h3>MUGS & MORE</h3>
             </div>
-
         </div>
 
-        <p class="bottom-text">
-            CUSTOM PRINTS • 3D CREATIONS • CRAFTED JUST FOR YOU!
-        </p>
-
+        <p class="services-subtext">CUSTOM PRINTS • 3D CREATIONS • CRAFTED JUST FOR YOU!</p>
     </section>
 
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-
-        <div class="about-text">
-
-            <h2>ABOUT ME</h2>
-
-            <p>
-                I create custom printed products, unique designs,
-                3D creations, apparel, stickers, mugs, and whatever
-                else we can dream up.
-            </p>
-
-            <p>
-                Have an idea? Let's turn it into something real.
-            </p>
-
+    <!-- Footer Banner -->
+    <footer class="footer-banner">
+        <div class="footer-contact">
+            <span class="email-icon">✉</span> WHYPRINTTHAT@GMAIL.COM
         </div>
-
-    </section>
-
-
-    <!-- CUSTOM ORDERS -->
-    <section class="custom" id="custom">
-
-        <h2>CUSTOM ORDERS</h2>
-
-        <p>
-            Have something specific in mind?
-            Tell me what you want and I'll see what I can create.
-        </p>
-
-        <a href="#contact" class="main-button">
-            START YOUR ORDER
-        </a>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <footer id="contact">
-
-        <div class="contact-email">
-            ✉️ your@email.com
+        <div class="social-links">
+            <a href="#">📷</a>
+            <a href="#">f</a>
         </div>
-
-        <div class="socials">
-            📷 &nbsp; Facebook
-        </div>
-
     </footer>
 
 </body>
