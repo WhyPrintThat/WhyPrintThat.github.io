@@ -3,79 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Print That</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Why Print That | It's Lame To Be Normal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rust: #9e3b1b;
+            --cream-bg: #f5f0e6;
+            --dark-green: #2c3e35;
+            --text-dark: #2b2b2b;
+            --footer-bg: #80301a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--cream-bg); color: var(--text-dark); }
+
+        /* Header Navigation */
+        header { display: flex; align-items: center; justify-content: space-between; padding: 15px 5%; max-width: 1400px; margin: 0 auto; }
+        .logo-group { display: flex; align-items: center; gap: 10px; }
+        .logo-text { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
+        .logo-text span { font-family: 'Caveat', cursive; font-size: 2.2rem; color: var(--rust); }
+
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1300px; margin: 20px auto; padding: 20px 5%; gap: 40px; }
+        .hero-content { flex: 1.1; }
+        .hero-title { font-family: 'Caveat', cursive; font-size: 4.5rem; color: var(--text-dark); line-height: 0.95; margin-bottom: 15px; }
+        .hero-subtitle { font-size: 1.1rem; font-weight: 500; margin-bottom: 25px; font-style: italic; }
+        .btn-primary { background-color: var(--dark-green); color: #fff; padding: 12px 28px; text-decoration: none; font-weight: 600; border-radius: 6px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+        .hero-image { flex: 0.9; text-align: center; }
+        .hero-image img { max-width: 100%; height: auto; border-radius: 50%; }
+
+        /* Services Section */
+        .section-header { text-align: center; margin: 40px 0 20px; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--text-dark); display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .section-header::before, .section-header::after { content: "—"; color: var(--rust); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto 40px; padding: 0 5%; text-align: center; }
+        .service-card { background: rgba(255,255,255,0.5); padding: 20px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.05); }
+        .service-card h4 { font-size: 0.95rem; font-weight: 700; margin-top: 10px; color: var(--text-dark); }
+
+        /* Sub-footer Banner */
+        .sub-footer { text-align: center; font-weight: 600; font-size: 0.95rem; margin: 30px 0 15px; letter-spacing: 0.5px; }
+
+        /* Footer */
+        footer { background-color: var(--footer-bg); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; font-size: 0.9rem; }
+        footer a { color: #fff; text-decoration: none; }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation Header -->
-    <header class="navbar">
-        <div class="logo">
-            <span class="beetle-icon">🪲</span>
-            <span class="logo-text">Why Print That</span>
+    <header>
+        <div class="logo-group">
+            <div class="logo-text">🪲 Why <span>Print That</span></div>
         </div>
-        <nav class="nav-links">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">SHOP NOW</a>
-            <a href="#">CUSTOM ORDERS</a>
-            <a href="#">CONTACT</a>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT ME</a></li>
+                <li><a href="#">SHOP NOW</a></li>
+                <li><a href="#">CUSTOM ORDERS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-left">
-            <h1 class="tagline-top">IT'S LAME</h1>
-            <h2 class="tagline-sub">TO BE</h2>
-            <h1 class="tagline-main">NORMAL.</h1>
-            <p class="subtitle">Let's make something awesome.</p>
-            <a href="#" class="cta-button">GET YOUR DESIGN HERE</a>
+        <div class="hero-content">
+            <h2 class="hero-title">IT'S LAME<br>TO BE<br>NORMAL.</h2>
+            <p class="hero-subtitle">Let's make it.</p>
+            <a href="#" class="btn-primary">THINK OUTTA THE BOX HERE</a>
         </div>
-        <div class="hero-right">
-            <!-- Replace hero-art.png with your main artwork or illustration -->
-            <img src="hero-art.png" alt="Creative Illustration" class="hero-illustration">
+        <div class="hero-image">
+            <img src="hero-art.png" alt="Why Print That Illustration">
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2 class="services-title">✦ OUR CREATIVE SERVICES ✦</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon-circle">👕</div>
-                <h3>SHIRTS & APPAREL</h3>
-            </div>
-            <div class="service-card">
-                <div class="icon-circle">🏷️</div>
-                <h3>DECALS & STICKERS</h3>
-            </div>
-            <div class="service-card">
-                <div class="icon-circle">📦</div>
-                <h3>3D OBJECT CREATIONS</h3>
-            </div>
-            <div class="service-card">
-                <div class="icon-circle">☕</div>
-                <h3>MUGS & MORE</h3>
-            </div>
-        </div>
+    <div class="section-header">
+        STUFF I MAKE
+    </div>
 
-        <p class="services-subtext">CUSTOM PRINTS • 3D CREATIONS • CRAFTED JUST FOR YOU!</p>
+    <section class="services-grid">
+        <div class="service-card">
+            <div style="font-size: 2rem;">👕</div>
+            <h4>SHIRTS & APPAREL</h4>
+        </div>
+        <div class="service-card">
+            <div style="font-size: 2rem;">🏷️</div>
+            <h4>DECALS & STICKERS</h4>
+        </div>
+        <div class="service-card">
+            <div style="font-size: 2rem;">📦</div>
+            <h4>3D OBJECT CREATIONS</h4>
+        </div>
+        <div class="service-card">
+            <div style="font-size: 2rem;">☕</div>
+            <h4>MUGS & MORE</h4>
+        </div>
     </section>
 
-    <!-- Footer Banner -->
-    <footer class="footer-banner">
-        <div class="footer-contact">
-            <span class="email-icon">✉</span> WHYPRINTTHAT@GMAIL.COM
-        </div>
-        <div class="social-links">
-            <a href="#">📷</a>
-            <a href="#">f</a>
-        </div>
+    <div class="sub-footer">
+        CUSTOM PRINTS • 3D CREATIONS • COOL CRAFT MAKINGS
+    </div>
+
+    <footer>
+        <div>✉️ WHYPRINTTHAT@GMAIL.COM</div>
+        <div>📷 📘</div>
     </footer>
 
 </body>
