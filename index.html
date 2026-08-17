@@ -21,22 +21,30 @@
         body { font-family: 'Poppins', sans-serif; background-color: var(--cream-bg); color: var(--text-dark); }
 
         /* Header Navigation */
-        header { display: flex; align-items: center; justify-content: space-between; padding: 15px 5%; max-width: 1400px; margin: 0 auto; }
+        header { display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; max-width: 1400px; margin: 0 auto; flex-wrap: wrap; gap: 20px; }
         .logo-group { display: flex; align-items: center; gap: 12px; }
         .logo-beetle { font-size: 2.3rem; line-height: 1; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15)); transform: rotate(-15deg); }
         .logo-text-group { display: flex; align-items: baseline; gap: 8px; }
         .logo-why { font-family: 'Caveat', cursive; font-size: 3rem; color: var(--rust); line-height: 0.8; font-weight: 700; }
         .logo-print { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.3rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dark); }
 
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; }
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 800; font-size: 1.35rem; letter-spacing: 1px; transition: color 0.2s; }
         nav a:hover { color: var(--rust); }
+        .callout-btn { color: var(--rust); position: relative; font-size: 1.4rem; }
+        .callout-btn::before { content: "👉 "; font-size: 1.3rem; }
+        .callout-btn::after { content: " 👈"; font-size: 1.3rem; }
 
         /* Hero Section */
         .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1300px; margin: 20px auto; padding: 20px 5%; gap: 40px; }
         .hero-content { flex: 1.1; }
         .hero-title { font-family: 'Caveat', cursive; font-size: 4.5rem; color: var(--text-dark); line-height: 0.95; margin-bottom: 15px; }
         .hero-subtitle { font-size: 1.2rem; font-weight: 600; margin-bottom: 25px; font-style: italic; color: var(--rust); letter-spacing: 0.5px; }
+
+        /* Prominent Socials Bar right under Hero */
+        .hero-socials { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
+        .social-pill { display: flex; align-items: center; gap: 8px; background-color: var(--rust); color: #fff; padding: 12px 22px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: opacity 0.2s, transform 0.2s; }
+        .social-pill:hover { opacity: 0.9; transform: translateY(-2px); }
 
         .hero-image { flex: 0.9; text-align: center; }
         .hero-image img { max-width: 100%; height: auto; border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
@@ -53,10 +61,7 @@
         .sub-footer { text-align: center; font-weight: 600; font-size: 0.95rem; margin: 30px 0 15px; letter-spacing: 0.5px; }
 
         /* Footer */
-        footer { background-color: var(--footer-bg); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; font-size: 0.9rem; flex-wrap: wrap; gap: 10px; }
-        .social-links { display: flex; gap: 15px; align-items: center; }
-        footer a { color: #fff; text-decoration: none; font-size: 1.1rem; }
-        footer a:hover { opacity: 0.8; }
+        footer { background-color: var(--footer-bg); color: #fff; display: flex; justify-content: center; align-items: center; padding: 20px 5%; font-size: 0.9rem; text-align: center; }
     </style>
 </head>
 <body>
@@ -71,9 +76,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#shop-section">SHOP NOW</a></li>
-                <li><a href="#">CUSTOM ORDERS</a></li>
-                <li><a href="https://wa.me/15708507417" target="_blank">CONTACT</a></li>
+                <li><a href="#shop-section" class="callout-btn">SHOP NOW</a></li>
+                <li><a href="https://wa.me/15708507417" target="_blank" class="callout-btn">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -82,6 +86,12 @@
         <div class="hero-content">
             <h2 class="hero-title">IT'S LAME<br>TO BE<br>NORMAL.</h2>
             <p class="hero-subtitle">Lets think out of the box.</p>
+            
+            <!-- TikTok & Facebook Links -->
+            <div class="hero-socials">
+                <a href="https://www.tiktok.com/@whyprintthat" target="_blank" class="social-pill">🎵 Check out my TikTok</a>
+                <a href="https://www.facebook.com" target="_blank" class="social-pill">📘 Visit my Facebook</a>
+            </div>
         </div>
         <div class="hero-image">
             <img src="hero-art.png" alt="Why Print That Illustration">
@@ -93,10 +103,6 @@
     </div>
 
     <section class="services-grid">
-        <div class="service-card">
-            <div style="font-size: 2rem;">👕</div>
-            <h4>CLOTHING</h4>
-        </div>
         <div class="service-card">
             <div style="font-size: 2rem;">🏷️</div>
             <h4>DECALS & STICKERS</h4>
@@ -117,10 +123,6 @@
 
     <footer>
         <div>✉️ WHYPRINTTHAT@GMAIL.COM</div>
-        <div class="social-links">
-            <a href="https://www.tiktok.com/@whyprintthat" target="_blank" title="TikTok">🎵 TikTok</a>
-            <a href="https://www.facebook.com" target="_blank" title="Facebook">📘 Facebook</a>
-        </div>
     </footer>
 
 </body>
