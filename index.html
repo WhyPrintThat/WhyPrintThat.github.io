@@ -36,7 +36,7 @@
         .btn-primary { background-color: var(--dark-green); color: #fff; padding: 12px 28px; text-decoration: none; font-weight: 600; border-radius: 6px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
         .hero-image { flex: 0.9; text-align: center; }
-        .hero-image img { max-width: 100%; height: auto; border-radius: 50%; }
+        .hero-image img { max-width: 100%; height: auto; border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         /* Services Section */
         .section-header { text-align: center; margin: 40px 0 20px; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--text-dark); display: flex; align-items: center; justify-content: center; gap: 15px; }
@@ -50,8 +50,10 @@
         .sub-footer { text-align: center; font-weight: 600; font-size: 0.95rem; margin: 30px 0 15px; letter-spacing: 0.5px; }
 
         /* Footer */
-        footer { background-color: var(--footer-bg); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; font-size: 0.9rem; }
-        footer a { color: #fff; text-decoration: none; }
+        footer { background-color: var(--footer-bg); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; font-size: 0.9rem; flex-wrap: wrap; gap: 10px; }
+        .social-links { display: flex; gap: 15px; align-items: center; }
+        footer a { color: #fff; text-decoration: none; font-size: 1.1rem; }
+        footer a:hover { opacity: 0.8; }
     </style>
 </head>
 <body>
@@ -63,7 +65,7 @@
         <nav>
             <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT ME</a></li>
+                <li><a href="#">ABOUT US</a></li>
                 <li><a href="#">SHOP NOW</a></li>
                 <li><a href="#">CUSTOM ORDERS</a></li>
                 <li><a href="#">CONTACT</a></li>
@@ -74,16 +76,16 @@
     <section class="hero">
         <div class="hero-content">
             <h2 class="hero-title">IT'S LAME<br>TO BE<br>NORMAL.</h2>
-            <p class="hero-subtitle">Let's make it.</p>
-            <a href="#" class="btn-primary">THINK OUTTA THE BOX HERE</a>
+            <p class="hero-subtitle">Let's make something awesome.</p>
+            <a href="#" class="btn-primary">GET YOUR DESIGN HERE</a>
         </div>
         <div class="hero-image">
-            <img src="hero-art.png" alt="Why Print That Illustration">
+            <img src="art.png" alt="Why Print That Illustration">
         </div>
     </section>
 
     <div class="section-header">
-        STUFF I MAKE
+        WHAT I MAKE
     </div>
 
     <section class="services-grid">
@@ -106,12 +108,15 @@
     </section>
 
     <div class="sub-footer">
-        CUSTOM PRINTS • 3D CREATIONS • COOL CRAFT MAKINGS
+        CUSTOM PRINTS • 3D CREATIONS • CRAFTED JUST FOR YOU!
     </div>
 
     <footer>
         <div>✉️ WHYPRINTTHAT@GMAIL.COM</div>
-        <div>📷 📘</div>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@whyprintthat" target="_blank" title="TikTok">🎵 TikTok</a>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">📘 Facebook</a>
+        </div>
     </footer>
 
 </body>
